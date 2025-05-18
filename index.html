@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycnet - Plataforma de intercambio y reciclaje</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="stylesheet" href="barra.css">
+    <link rel="stylesheet" href="https://tudominio.com/ruta/barra.css">
+</head>
+<body>
+    <!-- Botón de Alternar Barra Lateral -->
+    <button class="toggle-btn" id="sidebarToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    <!-- Barra lateral -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <i class="fas fa-recycle"></i>
+                Recycnet
+            </div>
+        </div>
+        <div class="sidebar-menu">
+            <a href="index.html" class="menu-item active">
+                <i class="fas fa-home"></i>
+                Inicio
+            </a>
+            <a href="comprar.html" class="menu-item">
+                <i class="fas fa-shopping-cart"></i>
+                Comprar
+            </a>
+            <a href="publicar.html" class="menu-item">
+                <i class="fas fa-upload"></i>
+                Publicar
+            </a>
+            <a href="foro.html" class="menu-item">
+                <i class="fas fa-comments"></i>
+                Foro
+            </a>
+        </div>
+    </div>
+    
+    <!-- Contenido principal -->
+    <div class="main-content" id="mainContent">
+        <header>
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <i class="fas fa-recycle"></i>
+                        Recycnet
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="#features">Características</a></li>
+                        <li><a href="#how-it-works">Cómo funciona</a></li>
+                        <li><a href="#materials">Materiales</a></li>
+                        <li><a href="#about">Sobre nosotros</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                    <div class="auth-buttons">
+                        <a href="inicio_sesion.html" class="login-btn">Iniciar sesión</a>
+                        <a href="login.html" class="register-btn">Registrarse</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="container">
+                <h1>Intercambia, Recicla, Gana</h1>
+                <p>Recycnet es la plataforma líder para comprar, vender e intercambiar materiales reciclables. Conectamos empresas, proveedores y particulares para crear un mundo más sostenible.</p>
+            </div>
+        </section>
+        <section class="features" id="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Características de nuestra plataforma</h2>
+                    <p>Descubre todas las herramientas que Recycnet pone a tu disposición para facilitar tus transacciones de materiales reciclables.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h3>Intercambio y Trueque</h3>
+                        <p>Realiza trueques de materiales sin necesidad de transacciones monetarias. Intercambia plástico por metal, papel por vidrio y mucho más.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-invoice"></i>
+                        </div>
+                        <h3>Comprobantes Digitales</h3>
+                        <p>Generamos automáticamente comprobantes en PDF para todas tus transacciones, garantizando la transparencia y respaldo de tus operaciones.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <h3>Sistema de Notificaciones</h3>
+                        <p>Recibe alertas instantáneas cuando alguien responda a tus ofertas o cuando haya nuevos materiales disponibles que te podrían interesar.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3>Registro Fotográfico</h3>
+                        <p>Sube fotos de tus materiales para verificar su calidad y estado, generando mayor confianza en las transacciones.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Negociación Transparente</h3>
+                        <p>Nuestra plataforma permite negociar los términos de las transacciones de forma clara y directa entre las partes involucradas.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Estadísticas y Seguimiento</h3>
+                        <p>Accede a estadísticas detalladas de tus transacciones e intercambios para optimizar tu negocio y tomar mejores decisiones.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works" id="how-it-works">
+            <div class="container">
+                <div class="section-title">
+                    <h2>¿Cómo funciona?</h2>
+                    <p>Recycnet simplifica el proceso de intercambio de materiales reciclables en simples pasos.</p>
+                </div>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Regístrate</h3>
+                        <p>Crea tu cuenta gratuita como particular, empresa o proveedor y configura tu perfil.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Publica tus materiales</h3>
+                        <p>Sube fotos y detalles de los materiales que quieres vender o intercambiar.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Recibe ofertas</h3>
+                        <p>Los interesados harán ofertas por tus materiales o propondrán intercambios.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Cierra el trato</h3>
+                        <p>Acepta la mejor oferta y recibe un comprobante digital que formaliza la operación.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="materials" id="materials">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Materiales populares</h2>
+                    <p>Explora los materiales más demandados en nuestra plataforma.</p>
+                </div>
+                <div class="materials-grid">
+                    <div class="material-card">
+                        <div class="material-img" style="background-image: url('/api/placeholder/400/300');"></div>
+                        <div class="material-info">
+                            <h3>Plástico PET</h3>
+                            <p>Botellas y envases de bebidas y alimentos</p>
+                            <a href="#" class="btn">Ver ofertas</a>
+                        </div>
+                    </div>
+                    <div class="material-card">
+                        <div class="material-img" style="background-image: url('/api/placeholder/400/300');"></div>
+                        <div class="material-info">
+                            <h3>Aluminio</h3>
+                            <p>Latas, perfiles y componentes metálicos</p>
+                            <a href="#" class="btn">Ver ofertas</a>
+                        </div>
+                    </div>
+                    <div class="material-card">
+                        <div class="material-img" style="background-image: url('/api/placeholder/400/300');"></div>
+                        <div class="material-info">
+                            <h3>Papel y Cartón</h3>
+                            <p>Periódicos, revistas, cajas y embalajes</p>
+                            <a href="#" class="btn">Ver ofertas</a>
+                        </div>
+                    </div>
+                    <div class="material-card">
+                        <div class="material-img" style="background-image: url('/api/placeholder/400/300');"></div>
+                        <div class="material-info">
+                            <h3>Vidrio</h3>
+                            <p>Botellas, frascos y recipientes de vidrio</p>
+                            <a href="#" class="btn">Ver ofertas</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>Únete a la revolución del reciclaje</h2>
+                <p>Miles de empresas y particulares ya están utilizando Recycnet para sus transacciones de materiales reciclables. ¡No te quedes atrás!</p>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Recycnet</h3>
+                        <p>Plataforma líder para el intercambio de materiales reciclables, impulsando la economía circular y la sostenibilidad.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Enlaces rápidos</h3>
+                        <ul class="footer-links">
+                            <li><a href="#features">Características</a></li>
+                            <li><a href="#how-it-works">Cómo funciona</a></li>
+                            <li><a href="#materials">Materiales</a></li>
+                            <li><a href="#about">Sobre nosotros</a></li>
+                            <li><a href="#contact">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Legal</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">Términos y condiciones</a></li>
+                            <li><a href="#">Política de privacidad</a></li>
+                            <li><a href="#">Política de cookies</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contacto</h3>
+                        <ul class="footer-links">
+                            <li><i class="fas fa-phone"></i> +34 123 456 789</li>
+                            <li><i class="fas fa-envelope"></i> info@recycnet.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 Recycnet. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="back.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+
+</body>
+</html>

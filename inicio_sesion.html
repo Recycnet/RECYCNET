@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycnet - Iniciar Sesión</title>
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Agregamos Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="barra.css">
+    <link rel="stylesheet" href="https://tudominio.com/ruta/barra.css">
+
+    <style>
+        /* Estilos específicos para la página de inicio de sesión */
+        .login-container {
+            max-width: 500px;
+            margin: 80px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .login-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .login-header .logo {
+            font-size: 2em;
+            color: #2ecc71;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .login-header .logo i {
+            margin-right: 10px;
+        }
+        
+        .login-form .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .login-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .login-form input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .login-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .login-form button:hover {
+            background-color: #27ae60;
+        }
+        
+        .login-footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .login-footer a {
+            color: #2ecc71;
+            text-decoration: none;
+        }
+        
+        .login-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Botón de Alternar Barra Lateral -->
+    <button class="toggle-btn" id="sidebarToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    <!-- Barra lateral -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <i class="fas fa-recycle"></i>
+                Recycnet
+            </div>
+        </div>
+        <div class="sidebar-menu">
+            <a href="index.html" class="menu-item active">
+                <i class="fas fa-home"></i>
+                Inicio
+            </a>
+            <a href="comprar.html" class="menu-item">
+                <i class="fas fa-shopping-cart"></i>
+                Comprar
+            </a>
+            <a href="publicar.html" class="menu-item">
+                <i class="fas fa-upload"></i>
+                Publicar
+            </a>
+            <a href="foro.html" class="menu-item">
+                <i class="fas fa-comments"></i>
+                Foro
+            </a>
+        </div>
+    </div>
+    <!-- Encabezado con navegación -->
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <i class="fas fa-recycle"></i>
+                    Recycnet
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Formulario de inicio de sesión -->
+    <section class="login-section">
+        <div class="container">
+            <div class="login-container">
+                <div class="login-header">
+                    <div class="logo">
+                        <i class="fas fa-recycle"></i>
+                        Recycnet
+                    </div>
+                    <h2>Iniciar Sesión</h2>
+                    <p>Ingresa tus credenciales para acceder a tu cuenta</p>
+                </div>
+                <form class="login-form" id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit">Iniciar Sesión</button>
+                </form>
+                <div class="login-footer">
+                    <p>¿No tienes una cuenta? <a href="login.html">Regístrate ahora</a></p>
+                    <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script para la página -->
+    <script>
+        // Función para manejar el envío del formulario de inicio de sesión
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Obtenemos los valores del formulario
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // Verificamos si los datos existen en localStorage
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            const user = users.find(u => u.email === email && u.password === password);
+            
+            if (user) {
+                // Guardamos el estado de inicio de sesión
+                localStorage.setItem('currentUser', JSON.stringify({
+                    username: user.username,
+                    email: user.email,
+                    isLoggedIn: true
+                }));
+                
+                // Redirigimos a la página principal
+                window.location.href = 'index.html';
+            } else {
+                alert('Correo electrónico o contraseña incorrectos. Por favor, inténtalo de nuevo.');
+            }
+        });
+    </script>
+    <script src="back.js"></script>
+    <script>
+        // Script para alternar la barra lateral
+        document.getElementById('sidebarToggle').addEventListener('click', function() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        });
+        // Cerrar la barra lateral al hacer clic fuera de ella
+        document.addEventListener('click', function(event) {
+            const sidebar = document.getElementById('sidebar');
+            const toggleBtn = document.getElementById('sidebarToggle');
+            if (!sidebar.contains(event.target) && !toggleBtn.contains(event.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
